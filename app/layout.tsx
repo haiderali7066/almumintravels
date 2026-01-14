@@ -12,25 +12,25 @@ export const metadata: Metadata = {
   title: "Al Mumin Travels UK - Umrah & Hajj Packages",
   description:
     "Premium Islamic travel services for Umrah and Hajj packages from UK. Trusted pilgrimage experiences with UK-based support.",
-  generator: "v0.app",
+  generator: "Haider/ Devntom solutions",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/logo.jpeg",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/logo.jpeg",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
+        url: "/logo.jpeg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/logo.jpeg",
   },
-}
+};
 
 export default function RootLayout({
   children,
