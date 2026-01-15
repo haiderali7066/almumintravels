@@ -1,13 +1,13 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 export const metadata = {
   title: "Contact Us - Al Mumin Travels UK",
   description:
     "Get in touch with Al Mumin Travels UK. Find our contact details, office hours, and reach out to our team.",
-}
+};
 
 export default function Contact() {
   return (
@@ -17,9 +17,12 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/10 via-transparent to-background py-12 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">Contact Us</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
+            Contact Us
+          </h1>
           <p className="text-lg md:text-xl text-muted-foreground text-balance">
-            We're here to help and answer any questions about our Umrah and Hajj packages. Reach out anytime!
+            We're here to help and answer any questions about our Umrah and Hajj
+            packages. Reach out anytime!
           </p>
         </div>
       </section>
@@ -29,26 +32,28 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Get In Touch
+            </h2>
 
             <div className="space-y-6">
-              {/* Phone */}
-              <div className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300 animate-slide-up">
+              <div className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                 <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Phone</p>
-                  <a href="tel:+447482795318" className="text-muted-foreground hover:text-primary transition text-lg">
+                  <a
+                    href="tel:+447482795318"
+                    className="text-muted-foreground hover:text-primary transition text-lg"
+                  >
                     +44 7482 795318
                   </a>
-                  <p className="text-sm text-muted-foreground mt-2">Available Monday-Friday, 9 AM - 6 PM</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Available Monday-Friday, 9 AM - 6 PM
+                  </p>
                 </div>
               </div>
 
-              {/* Email */}
-              <div
-                className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: "0.1s" }}
-              >
+              <div className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                 <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Email</p>
@@ -58,40 +63,46 @@ export default function Contact() {
                   >
                     Info@alhmumintravel.com
                   </a>
-                  <p className="text-sm text-muted-foreground mt-2">We respond within 24 hours</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    We respond within 24 hours
+                  </p>
                 </div>
               </div>
 
-              {/* Location */}
-              <div
-                className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: "0.2s" }}
-              >
+              <div className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                 <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">Location</p>
-                  <p className="text-muted-foreground text-lg">United Kingdom</p>
-                  <p className="text-sm text-muted-foreground mt-2">Serving UK pilgrims nationwide</p>
+                  <p className="text-muted-foreground text-lg">
+                    United Kingdom
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Serving UK pilgrims nationwide
+                  </p>
                 </div>
               </div>
 
-              {/* Hours */}
-              <div
-                className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: "0.3s" }}
-              >
+              <div className="flex gap-4 p-6 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                 <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Office Hours</p>
-                  <p className="text-muted-foreground text-lg">Mon - Fri: 9:00 AM - 6:00 PM GMT</p>
-                  <p className="text-muted-foreground text-lg">Sat - Sun: 10:00 AM - 4:00 PM GMT</p>
+                  <p className="font-semibold text-foreground mb-1">
+                    Office Hours
+                  </p>
+                  <p className="text-muted-foreground text-lg">
+                    Mon - Fri: 9:00 AM - 6:00 PM GMT
+                  </p>
+                  <p className="text-muted-foreground text-lg">
+                    Sat - Sun: 10:00 AM - 4:00 PM GMT
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Quick Contact Options */}
             <div className="pt-6 border-t border-border">
-              <h3 className="font-semibold text-foreground mb-4">Quick Connect</h3>
+              <h3 className="font-semibold text-foreground mb-4">
+                Quick Connect
+              </h3>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="https://wa.me/447482795318"
@@ -112,14 +123,15 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div
-            className="bg-card border border-border rounded-2xl p-6 md:p-8 animate-slide-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <h3 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h3>
+          <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              Send us a Message
+            </h3>
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Full Name*</label>
+                <label className="block text-sm font-medium text-foreground mb-2">
+                  Full Name*
+                </label>
                 <input
                   type="text"
                   placeholder="Your full name"
@@ -129,7 +141,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Email Address*</label>
+                <label className="block text-sm font-medium text-foreground mb-2">
+                  Email Address*
+                </label>
                 <input
                   type="email"
                   placeholder="your@email.com"
@@ -139,7 +153,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Phone Number*</label>
+                <label className="block text-sm font-medium text-foreground mb-2">
+                  Phone Number*
+                </label>
                 <input
                   type="tel"
                   placeholder="+44..."
@@ -149,7 +165,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Inquiry Type*</label>
+                <label className="block text-sm font-medium text-foreground mb-2">
+                  Inquiry Type*
+                </label>
                 <select
                   required
                   className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground transition-all"
@@ -163,7 +181,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Message*</label>
+                <label className="block text-sm font-medium text-foreground mb-2">
+                  Message*
+                </label>
                 <textarea
                   placeholder="Tell us about your pilgrimage plans..."
                   rows={5}
@@ -176,7 +196,9 @@ export default function Contact() {
                 <Send size={18} />
                 Send Message
               </Button>
-              <p className="text-xs text-muted-foreground text-center">We'll get back to you within 24 hours</p>
+              <p className="text-xs text-muted-foreground text-center">
+                We'll get back to you within 24 hours
+              </p>
             </form>
           </div>
         </div>
@@ -185,9 +207,12 @@ export default function Contact() {
       {/* CTA Section */}
       <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Prefer to Talk Directly?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Prefer to Talk Directly?
+          </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Our team is ready to discuss your pilgrimage plans in detail. Call us anytime during office hours.
+            Our team is ready to discuss your pilgrimage plans in detail. Call
+            us anytime during office hours.
           </p>
           <a
             href="tel:+447482795318"
@@ -200,5 +225,5 @@ export default function Contact() {
 
       <Footer />
     </main>
-  )
+  );
 }

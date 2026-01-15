@@ -71,14 +71,14 @@ export function Footer() {
               <div className="flex gap-2">
                 <MapPin size={16} className="shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-background">London</p>
+                  <p className="font-semibold text-background">Near London</p>
                   <p>9a, 1st Floor, Waterborne Walk, Leighton Buzzard, LU7 1DH</p>
                 </div>
               </div>
               <div className="flex gap-2">
                 <MapPin size={16} className="shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-background">Manchester</p>
+                  <p className="font-semibold text-background">Near Manchester</p>
                   <p>302 Colne Road, Burnley, BB10 1DZ</p>
                 </div>
               </div>
