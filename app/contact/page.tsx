@@ -79,10 +79,10 @@ export default function Contact() {
                 <div>
                   <p className="font-semibold text-foreground mb-1">Email</p>
                   <a
-                    href="mailto:Info@almumintravels.com"
+                    href="mailto:Info@almumintravels.co.uk"
                     className="text-muted-foreground hover:text-primary transition text-lg"
                   >
-                    Info@almumintravels.com
+                    Info@almumintravels.co.uk
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">
                     We respond within 24 hours
@@ -142,7 +142,7 @@ export default function Contact() {
                   Call Now
                 </a>
                 <a
-                  href="mailto:Info@almumintravels.com"
+                  href="mailto:Info@almumintravels.co.uk"
                   className="flex-1 bg-[#c9a24d] hover:bg-[#b8923f] text-[#0f2f24] px-4 py-3 rounded-full text-center font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Email Us
@@ -253,7 +253,7 @@ export default function Contact() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                   {/* Call */}
                   <a
-                    href="mailto:Info@almumintravels.com?subject=Inquiry"
+                    href="mailto:Info@almumintravels.co.uk?subject=Inquiry"
                     className="rounded-full px-8 py-3 text-lg bg-[#c9a24d] text-[#0f2f24] hover:bg-[#b8923f] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
                   >
                     Get in Touch
@@ -306,7 +306,7 @@ export default function Contact() {
               💬 WhatsApp
             </a>
             <a
-              href="mailto:Info@almumintravels.com"
+              href="mailto:Info@almumintravels.co.uk"
               className="inline-block bg-[#c9a24d] hover:bg-[#b8923f] text-[#0f2f24] px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               ✉️ Email

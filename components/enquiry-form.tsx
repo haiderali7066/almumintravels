@@ -29,7 +29,7 @@ export function EnquiryForm() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPassengers: ${formData.passengers}\nPackage Type: ${formData.packageType}\nDeparture Airport: ${formData.departureAirport}`
     );
-    window.location.href = `mailto:Info@almumintravels.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:Info@almumintravels.co.uk?subject=${subject}&body=${body}`;
   };
 
   return (

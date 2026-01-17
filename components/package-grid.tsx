@@ -20,148 +20,100 @@ const categoryImages: Record<string, string> = {
 };
 
 const packageData: Record<string, PackageCard[]> = {
-  /* --- unchanged data (kept exactly as you sent) --- */
   "5-star": [
     {
       nights: 7,
-      hotel: "5-Star Hilton Makkah",
-      amenities: [
-        "Umrah-specific meals",
-        "Airport transfers",
-        "Expert guide",
-        "Ziyarat tours",
-      ],
-      price: "From £2,499",
+      hotel: "5 Star Hotels In Makkah & Madinah",
+      amenities: ["Flights", "Visa", "Transport", "Ziarats & Umrah Guidance"],
+      price: "£899",
     },
     {
       nights: 10,
-      hotel: "5-Star Fairmont Makkah & Madinah",
+      hotel: "5 Star Hotels In Makkah & Madinah",
       amenities: [
-        "Premium accommodation",
-        "All meals included",
-        "VIP guide",
-        "Complete Ziyarat package",
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Ziarats & Umrah Guidance",
       ],
-      price: "From £3,299",
+      price: "£999",
     },
     {
       nights: 14,
-      hotel: "5-Star Extended Package",
+      hotel: "5 Star Hotels In Makkah & Madinah",
       amenities: [
-        "Luxury hotels",
-        "Premium meals",
-        "Personal assistant",
-        "Extended Ziyarat",
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Ziarats & Umrah Guidance",
       ],
-      price: "From £4,299",
+      price: "£1,150",
     },
   ],
+
   "4-star": [
     {
       nights: 7,
-      hotel: "4-Star Al Marwah Makkah",
-      amenities: [
-        "Comfortable stay",
-        "Airport transfers",
-        "Trained guide",
-        "Ziyarat tours",
-      ],
-      price: "From £1,599",
+      hotel: "4 Star Hotels In Makkah & Madinah",
+      amenities: ["Flights", "Visa", "Transport", "Ziarats & Umrah Guidance"],
+      price: "£750",
     },
     {
       nights: 10,
-      hotel: "4-Star Makkah & Madinah Combo",
+      hotel: "4 Star Hotels In Makkah & Madinah",
       amenities: [
-        "Good accommodation",
-        "Breakfast included",
-        "Knowledgeable guide",
-        "Complete Ziyarat",
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Ziarats & Umrah Guidance",
       ],
-      price: "From £2,199",
+      price: "£850",
     },
     {
       nights: 14,
-      hotel: "4-Star Extended Package",
+      hotel: "4 Star Hotels In Makkah & Madinah",
       amenities: [
-        "Quality hotels",
-        "Meals included",
-        "Expert guidance",
-        "Full Ziyarat package",
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Ziarats & Umrah Guidance",
       ],
-      price: "From £2,799",
+      price: "£990",
     },
   ],
+
   "3-star": [
     {
       nights: 7,
-      hotel: "3-Star Budget-Friendly Makkah",
-      amenities: [
-        "Clean accommodation",
-        "Transfers included",
-        "Guide support",
-        "Essential Ziyarat",
-      ],
-      price: "From £999",
+      hotel: "3 Star Hotels In Makkah & Madinah",
+      amenities: ["Flights", "Visa", "Transport", "Ziarats & Umrah Guidance"],
+      price: "£650",
     },
     {
       nights: 10,
-      hotel: "3-Star Economy Package",
+      hotel: "3 Star Hotels In Makkah & Madinah",
       amenities: [
-        "Basic accommodation",
-        "Some meals",
-        "Local guide",
-        "Key sites Ziyarat",
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Ziarats & Umrah Guidance",
       ],
-      price: "From £1,299",
+      price: "£750",
     },
     {
       nights: 14,
-      hotel: "3-Star Value Package",
+      hotel: "3 Star Hotels In Makkah & Madinah",
       amenities: [
-        "Economical stay",
-        "Breakfast included",
-        "Guide assistance",
-        "Ziyarat coverage",
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Ziarats & Umrah Guidance",
       ],
-      price: "From £1,699",
-    },
-  ],
-  hajj: [
-    {
-      nights: 21,
-      hotel: "5-Star Hajj Premium",
-      amenities: [
-        "Top-tier hotels",
-        "Full meal plan",
-        "Expert Hajj guide",
-        "Complete Ziyarat",
-      ],
-      price: "From £4,999",
-    },
-    {
-      nights: 21,
-      hotel: "5-Star Hajj Deluxe",
-      amenities: [
-        "Premium accommodation",
-        "Luxury meals",
-        "Personal assistant",
-        "Extended Ziyarat",
-      ],
-      price: "From £6,299",
-    },
-    {
-      nights: 21,
-      hotel: "5-Star Hajj Ultimate",
-      amenities: [
-        "5-star luxury",
-        "Gourmet meals",
-        "Dedicated support team",
-        "Comprehensive Ziyarat",
-      ],
-      price: "From £7,999",
+      price: "£899",
     },
   ],
 };
+
 
 export function PackageGrid({ title, tier }: { title: string; tier: string }) {
   const packages = packageData[tier] || [];

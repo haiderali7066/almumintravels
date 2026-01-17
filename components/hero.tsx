@@ -14,7 +14,7 @@ export function Hero() {
       {/* Background image fallback */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url("/hero-bg.jpg")` }}
+        // style={{ backgroundImage: `url("/hero-bg.jpg")` }}
       />
 
       {/* Video */}

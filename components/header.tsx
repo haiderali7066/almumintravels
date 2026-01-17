@@ -33,7 +33,7 @@ export function Header() {
               <Phone size={16} /> +44 7482 795318
             </a>
             <a
-              href="mailto:Info@almumintravels.com"
+              href="mailto:Info@almumintravels.co.uk"
               className="flex items-center gap-2 hover:opacity-80 transition truncate max-w-[220px]"
             >
               <Mail size={16} />{" "}

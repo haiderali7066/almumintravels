@@ -5,6 +5,8 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/cta-section";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const title = "Halal Umrah Combo Tours";
 
@@ -66,6 +68,8 @@ const packages = [
 export default function HalalToursPage() {
   return (
     <>
+          <Header />
+    
       {/* Hero Section */}
       <section className="relative py-12 md:py-24 px-4 overflow-hidden bg-[#0f2f24]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f2f24] via-[#0f2f24] to-black/90" />
@@ -166,6 +170,8 @@ export default function HalalToursPage() {
         </div> 
         <br /> <br />
         <CTASection/>
+              <Footer />
+        
       </section>
     </>
   );

@@ -46,7 +46,7 @@ export function CTASection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
-            href="mailto:Info@almumintravels.com?subject=Inquiry"
+            href="mailto:Info@almumintravels.co.uk?subject=Inquiry"
             className="rounded-full px-8 py-3 text-lg bg-[#c9a24d] text-[#0f2f24] hover:bg-[#b8923f] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             Get in Touch

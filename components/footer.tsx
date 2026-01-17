@@ -92,10 +92,10 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Mail size={16} />
                 <a
-                  href="mailto:Info@almumintravels.com"
+                  href="mailto:Info@almumintravels.co.uk"
                   className="hover:text-background transition"
                 >
-                  Info@almumintravels.com
+                  Info@almumintravels.co.uk
                 </a>
               </li>
             </ul>
