@@ -45,59 +45,30 @@ export function CTASection() {
           }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          {/* Call */}
-          <motion.a
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            href="tel:+447482795318"
+          <a
+            href="mailto:Info@almumintravels.com?subject=Inquiry"
+            className="rounded-full px-8 py-3 text-lg bg-[#c9a24d] text-[#0f2f24] hover:bg-[#b8923f] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full bg-[#c9a24d] text-black font-semibold px-8
-                         hover:bg-white transition shadow-lg"
-            >
-              <Phone size={20} />
-              Call Now
-            </Button>
-          </motion.a>
+            Get in Touch
+          </a>
+
+          {/* Call Now */}
+          <a
+            href="tel:+447482795318"
+            className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            Call Us Now
+          </a>
 
           {/* WhatsApp */}
-          <motion.a
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
+          <a
             href="https://wa.me/447482795318"
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full border border-[#c9a24d] text-[#c9a24d] px-8
-                         hover:bg-[#c9a24d] hover:text-black transition shadow-lg"
-            >
-              <MessageCircle size={20} />
-              WhatsApp
-            </Button>
-          </motion.a>
-
-          {/* Quote */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full border border-white/50 text-white px-8
-                         hover:bg-white/10 transition"
-            >
-              Get Quote
-            </Button>
-          </motion.div>
+            WhatsApp
+          </a>
         </motion.div>
       </div>
     </section>

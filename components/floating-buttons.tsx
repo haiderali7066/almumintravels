@@ -41,7 +41,7 @@ export function FloatingButtons() {
         booking:
           "You can book directly through our website or call us at +44 7482 795318. Our team is available 9 AM - 6 PM, Monday to Friday.",
         contact:
-          "You can reach us at +44 7482 795318 or email Info@alhmumintravel.com. We also have a dedicated WhatsApp channel!",
+          "You can reach us at +44 7482 795318 or email Info@almumintravels.com. We also have a dedicated WhatsApp channel!",
         default:
           "Thank you for your interest! Would you like to know more about our Umrah, Hajj packages, or pricing? Feel free to call us at +44 7482 795318.",
       }

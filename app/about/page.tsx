@@ -6,12 +6,6 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Zap, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
 
-// export const metadata = {
-//   title: "About Us - Al Mumin Travels UK",
-//   description:
-//     "Learn about Al Mumin Travels UK, our mission, values, and commitment to pilgrimage excellence.",
-// };
-
 export default function About() {
   const values = [
     {
@@ -56,31 +50,84 @@ export default function About() {
     <main className="w-full">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/10 via-transparent to-background py-12 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
-            About Al Mumin Travels UK
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground text-balance">
-            Your trusted partner in spiritual pilgrimage for over 15 years. We
-            are dedicated to creating transformative Umrah and Hajj experiences
-            for UK pilgrims.
-          </p>
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative py-12 md:py-24 px-4 overflow-hidden bg-[#0f2f24]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f2f24] via-[#0f2f24] to-black/90" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-40 bg-gradient-to-t from-[#c9a24d]/20 to-transparent blur-3xl" />
+
+        <div className="relative max-w-4xl mx-auto text-center space-y-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold text-white text-balance"
+          >
+            About <span className="text-[#c9a24d]">Al Mumin Travels</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-white/85 text-balance max-w-3xl mx-auto"
+          >
+            Your trusted UK-based partner for spiritually fulfilling Umrah and
+            Hajj journeys for over 15 years.
+          </motion.p>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.12 } },
+            }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"
+          >
+            {[
+              { icon: Trophy, text: "15+ Years Experience" },
+              { icon: Users, text: "5,000+ Pilgrims Served" },
+              { icon: CheckCircle, text: "Trusted & Certified" },
+              { icon: Zap, text: "24/7 Support" },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  className="flex items-center justify-center gap-2
+                    bg-white/95 backdrop-blur
+                    border border-[#c9a24d]/30
+                    rounded-full px-4 py-2
+                    shadow-md"
+                >
+                  <Icon size={16} className="text-[#c9a24d]" />
+                  <span className="text-xs md:text-sm text-[#0f2f24] font-medium">
+                    {item.text}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* ================= STATS ================= */}
       <section className="py-12 md:py-16 px-4 bg-primary/5">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className=""
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
@@ -94,68 +141,55 @@ export default function About() {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* ================= STORY ================= */}
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            Our Story
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Story</h2>
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p className="text-lg">
               Al Mumin Travels UK was established with a singular vision: to
               provide UK-based Muslim pilgrims with accessible, affordable, and
-              exceptional Islamic travel experiences. Our founders brought
-              together decades of combined expertise in pilgrimage management,
-              hospitality, and customer service to create something truly
-              special.
+              exceptional Islamic travel experiences.
             </p>
             <p className="text-lg">
-              We understand that undertaking Umrah or Hajj is more than just a
-              journey—it is a transformative spiritual experience. This is why
-              we've meticulously crafted every aspect of our service, from
-              pre-departure consultations to post-pilgrimage support. Our
-              commitment is to handle all logistical details with precision,
-              allowing you to focus entirely on your spiritual devotion and
-              connection with the Divine.
+              Umrah and Hajj are not just journeys — they are spiritual
+              transformations. We manage every detail so you can focus entirely
+              on worship and devotion.
             </p>
             <p className="text-lg">
-              With thousands of satisfied pilgrims and growing partnerships with
-              premium accommodations and service providers in Makkah and
-              Madinah, we continue to set new standards in UK Islamic travel
-              services. Every pilgrim who travels with us becomes part of the Al
-              Mumin family, and their satisfaction and spiritual growth are our
-              greatest rewards.
+              Thousands of satisfied pilgrims later, our mission remains
+              unchanged: sincerity, excellence, and care.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* ================= VALUES ================= */}
       <section className="py-12 md:py-20 px-4 bg-muted/50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             Our Core Values
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-card border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg hover:border-primary/50 transition-all duration-300"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-card border rounded-2xl p-6 md:p-8 hover:shadow-lg hover:border-primary/50 transition"
                 >
                   <div className="flex gap-4">
-                    <Icon className="w-8 h-8 text-primary flex-shrink-0" />
+                    <Icon className="w-8 h-8 text-primary" />
                     <div>
-                      <h3 className="font-semibold text-lg text-foreground mb-2">
+                      <h3 className="font-semibold text-lg mb-2">
                         {value.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground">
                         {value.description}
                       </p>
                     </div>
@@ -167,52 +201,79 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* ================= WHY CHOOSE ================= */}
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Why Choose Al Mumin?
           </h2>
           <div className="space-y-4">
             {[
-              "Expert guides who are fluent in Arabic and English",
-              "Carefully vetted accommodations with Islamic facilities",
-              "24/7 emergency support throughout your pilgrimage",
-              "Flexible packages tailored to your needs and budget",
-              "Group discounts and family packages available",
-              "Comprehensive pre-departure guidance and orientation",
-            ].map((reason, index) => (
+              "Expert bilingual religious guides",
+              "Hand-picked hotels near Haram",
+              "24/7 UK & on-ground support",
+              "Flexible family & group packages",
+              "Complete pre-departure guidance",
+            ].map((item, i) => (
               <div
-                key={index}
-                className="flex gap-4 items-start bg-background/50 p-4 rounded-lg hover:bg-muted/30 transition"
+                key={i}
+                className="flex gap-4 items-start p-4 rounded-lg bg-muted/30"
               >
-                <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
-                <p className="text-muted-foreground text-lg">{reason}</p>
+                <CheckCircle className="w-6 h-6 text-primary mt-1" />
+                <p className="text-lg text-muted-foreground">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 md:py-20 px-4 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Ready for Your Spiritual Journey?
+      {/* ================= CTA ================= */}
+      <section className="relative py-12 md:py-24 px-4 overflow-hidden bg-[#0f2f24]">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative max-w-4xl mx-auto text-center space-y-6"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Ready for Your{" "}
+            <span className="text-[#c9a24d]">Spiritual Journey?</span>
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Contact us today to discuss your Umrah or Hajj plans and get
-            personalized recommendations
+
+          <p className="text-lg text-white/85 max-w-2xl mx-auto">
+            Speak with our experienced advisors and receive personalized Umrah
+            or Hajj guidance today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            {/* Get in Touch (Email) */}
+            <a
+              href="mailto:Info@almumintravels.com?subject=Inquiry"
+              className="rounded-full px-8 py-3 text-lg bg-[#c9a24d] text-[#0f2f24] hover:bg-[#b8923f] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+            >
               Get in Touch
-            </Button>
-            <Button className="bg-secondary text-foreground px-8 py-3 rounded-full text-lg border border-secondary hover:bg-secondary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            </a>
+
+            {/* Call Now */}
+            <a
+              href="tel:+447482795318"
+              className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+            >
               Call Us Now
-            </Button>
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/447482795318"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+            >
+              WhatsApp
+            </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <Footer />

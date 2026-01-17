@@ -3,7 +3,7 @@ export function ImageTextSection() {
     <section
       className="relative py-20 md:py-28 bg-center bg-cover"
       style={{
-        backgroundImage: "url('/pilgrims-prayer-mosque-spiritual.jpg')",
+        backgroundImage: "url('/cta.jpg')",
       }}
     >
       {/* Overlay */}

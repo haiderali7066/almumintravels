@@ -13,6 +13,7 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "Umrah", href: "/umrah-packages" },
     { label: "Hajj", href: "/hajj-packages" },
+    { label: "Guide", href: "/guide" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
@@ -31,11 +32,11 @@ export function Header() {
               <Phone size={16} /> +44 7482 795318
             </a>
             <a
-              href="mailto:Info@alhmumintravel.com"
+              href="mailto:Info@almumintravels.com"
               className="flex items-center gap-2 hover:opacity-80 transition truncate max-w-[220px]"
             >
               <Mail size={16} />{" "}
-              <span className="truncate">Info@alhmumintravel.co.uk</span>
+              <span className="truncate">Info@almumintravels.co.uk</span>
             </a>
           </div>
 

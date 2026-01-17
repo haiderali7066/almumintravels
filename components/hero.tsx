@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -39,7 +40,7 @@ export function Hero() {
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-6 text-balance leading-tight text-white">
-          Your Journey of Faith
+          Your Journey of Faith Our Promise of Trust
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-10 text-white/90 text-balance font-light">
           Trusted UK-based Islamic travel services for transformative Umrah and
@@ -48,24 +49,20 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           {/* Gold button */}
-          <Button
-            size="lg"
-            className="bg-[#c9a24d] hover:bg-[#ffd95b] text-black flex items-center justify-center gap-2 group px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          <Link
+            href="/umrah-packages"
+            className="rounded-full px-8 py-3 text-lg text-black bg-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             Explore Packages
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform duration-300"
-            />
-          </Button>
+          </Link>
 
-          {/* Dark Green button */}
-          <Button
-            size="lg"
-            className="bg-[#0f2f24] hover:bg-[#164234] text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          {/* Call Now */}
+          <a
+            href="tel:+447482795318"
+            className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
-            Free Quote
-          </Button>
+            Book a Tour Now
+          </a>
         </div>
       </motion.div>
     </section>

@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, PhoneCall } from "lucide-react";
 import { useState } from "react";
 
 export function EnquiryForm() {
@@ -24,12 +24,17 @@ export function EnquiryForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    // Create a mailto link
+    const subject = encodeURIComponent("Enquiry from Al Mumin Travels");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPassengers: ${formData.passengers}\nPackage Type: ${formData.packageType}\nDeparture Airport: ${formData.departureAirport}`
+    );
+    window.location.href = `mailto:Info@almumintravels.com?subject=${subject}&body=${body}`;
   };
 
   return (
-    <section className="py-14 md:py-20 bg-white">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+    <section className="py-12 px-4 sm:px-6 md:py-20 bg-white">
+      <div className="max-w-2xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-black mb-3">
@@ -46,6 +51,7 @@ export function EnquiryForm() {
           onSubmit={handleSubmit}
           className="bg-[#0f2f24] rounded-2xl p-6 md:p-8 space-y-4 shadow-xl"
         >
+          {/* Inputs */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input
               type="text"
@@ -54,8 +60,7 @@ export function EnquiryForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50
-                         border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
+              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
             />
 
             <input
@@ -65,8 +70,7 @@ export function EnquiryForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50
-                         border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
+              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
             />
           </div>
 
@@ -78,8 +82,7 @@ export function EnquiryForm() {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50
-                         border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
+              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
             />
 
             <input
@@ -89,8 +92,7 @@ export function EnquiryForm() {
               value={formData.passengers}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50
-                         border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
+              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
             />
           </div>
 
@@ -99,8 +101,7 @@ export function EnquiryForm() {
               name="packageType"
               value={formData.packageType}
               onChange={handleChange}
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black
-                         border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
+              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
             >
               <option value="5-star">5-Star Package</option>
               <option value="4-star">4-Star Package</option>
@@ -113,8 +114,7 @@ export function EnquiryForm() {
               placeholder="Departure Airport"
               value={formData.departureAirport}
               onChange={handleChange}
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50
-                         border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
+              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
             />
           </div>
 
@@ -122,10 +122,9 @@ export function EnquiryForm() {
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
             <Button
               type="submit"
-              className="flex-1 rounded-full bg-[#c9a24d] text-black font-semibold
-                         hover:bg-white transition"
+              className="flex-1 rounded-full bg-[#c9a24d] text-black font-semibold hover:bg-white transition"
             >
-              Get Quote
+              Submit
             </Button>
 
             <a
@@ -136,12 +135,20 @@ export function EnquiryForm() {
             >
               <Button
                 type="button"
-                className="w-full rounded-full border border-[#c9a24d] text-[#c9a24d]
-                           hover:bg-[#c9a24d] hover:text-black transition
-                           flex items-center justify-center gap-2"
+                className="w-full rounded-full border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d] hover:text-black transition flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
                 WhatsApp
+              </Button>
+            </a>
+
+            <a href="tel:+447482795318" className="sm:w-auto">
+              <Button
+                type="button"
+                className="w-full rounded-full border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d] hover:text-black transition flex items-center justify-center gap-2"
+              >
+                <PhoneCall size={18} />
+                Call
               </Button>
             </a>
           </div>

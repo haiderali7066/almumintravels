@@ -4,14 +4,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { PackageGrid } from "@/components/package-grid";
-import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Users, Zap } from "lucide-react";
-
-// export const metadata = {
-//   title: "Umrah Packages - Al Mumin Travels UK",
-//   description:
-//     "Explore our premium Umrah packages. 5-star, 4-star, and 3-star options tailored to your needs and budget.",
-// };
 
 export default function UmrahPackages() {
   const features = [
@@ -25,30 +18,33 @@ export default function UmrahPackages() {
     <main className="w-full">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-[#c9a24d]/10 via-transparent to-white py-12 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+      {/* ================= HERO ================= */}
+      <section className="relative py-12 md:py-24 px-4 overflow-hidden bg-[#0f2f24]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f2f24] via-[#0f2f24] to-black/90" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-40 bg-gradient-to-t from-[#c9a24d]/20 to-transparent blur-3xl" />
+
+        <div className="relative max-w-4xl mx-auto text-center space-y-6">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-[#0f2f24] text-balance"
+            className="text-4xl md:text-6xl font-bold text-white text-balance"
           >
-            Umrah Packages
+            Umrah <span className="text-[#c9a24d]">Packages</span>
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-[#0f2f24]/80 text-balance"
+            className="text-lg md:text-xl text-white/85 text-balance max-w-3xl mx-auto"
           >
-            Choose from carefully curated Umrah packages designed to provide
+            Choose from carefully curated Umrah packages designed to deliver
             spiritual fulfillment, comfort, and unforgettable experiences.
           </motion.p>
 
-          {/* Feature Pills */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -57,7 +53,7 @@ export default function UmrahPackages() {
               hidden: {},
               visible: { transition: { staggerChildren: 0.12 } },
             }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"
           >
             {features.map((feature, idx) => {
               const Icon = feature.icon;
@@ -68,10 +64,14 @@ export default function UmrahPackages() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  className="flex items-center justify-center gap-2 bg-white border border-[#c9a24d]/20 rounded-full px-4 py-2 shadow-sm"
+                  className="flex items-center justify-center gap-2
+                    bg-white/95 backdrop-blur
+                    border border-[#c9a24d]/30
+                    rounded-full px-4 py-2
+                    shadow-md"
                 >
-                  <Icon size={16} className="text-[#c9a24d] flex-shrink-0" />
-                  <span className="text-xs md:text-sm text-[#0f2f24]/80 text-center">
+                  <Icon size={16} className="text-[#c9a24d]" />
+                  <span className="text-xs md:text-sm text-[#0f2f24] font-medium">
                     {feature.text}
                   </span>
                 </motion.div>
@@ -81,8 +81,8 @@ export default function UmrahPackages() {
         </div>
       </section>
 
-      {/* About Umrah Section */}
-      <section className="py-12 md:py-16 px-4 bg-[#f5f5f5]">
+      {/* ================= ABOUT UMRAH ================= */}
+      <section className="py-12 md:py-16 px-4 bg-[#eaf5f0]">
         <div className="max-w-4xl mx-auto space-y-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -119,8 +119,8 @@ export default function UmrahPackages() {
         </div>
       </section>
 
-      {/* Packages */}
-      <section className="py-12 md:py-20 px-4">
+      {/* ================= PACKAGES ================= */}
+      <section className="py-12 md:py-20 px-4 bg-[#fff8e1]">
         <div className="max-w-7xl mx-auto space-y-16">
           <PackageGrid title="💎 5-Star Luxury Umrah Packages" tier="5-star" />
           <PackageGrid title="⭐ 4-Star Comfort Umrah Packages" tier="4-star" />
@@ -128,7 +128,7 @@ export default function UmrahPackages() {
         </div>
       </section>
 
-      {/* Inclusions */}
+      {/* ================= INCLUSIONS ================= */}
       <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-[#c9a24d]/5 to-[#0f2f24]/5">
         <div className="max-w-4xl mx-auto">
           <motion.h2
@@ -171,8 +171,8 @@ export default function UmrahPackages() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-12 md:py-20 px-4">
+      {/* ================= CTA ================= */}
+      <section className="py-12 md:py-20 px-4 bg-[#0f2f24]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -180,24 +180,38 @@ export default function UmrahPackages() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center space-y-6"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0f2f24]">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             Ready to Book Your Umrah?
           </h2>
-          <p className="text-lg text-[#0f2f24]/80">
+          <p className="text-lg text-white/80">
             Contact our team to customize a package that suits your spiritual
             goals and budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
-            <Button className="bg-[#c9a24d] hover:bg-[#ffd95b] text-black px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-              Get a Custom Quote
-            </Button>
+            {/* Call */}
+            <a
+              href="mailto:Info@almumintravels.com?subject=Inquiry"
+              className="rounded-full px-8 py-3 text-lg bg-[#c9a24d] text-[#0f2f24] hover:bg-[#b8923f] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+            >
+              Get in Touch
+            </a>
+
+            {/* Call Now */}
+            <a
+              href="tel:+447482795318"
+              className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+            >
+              Call Us Now
+            </a>
+
+            {/* WhatsApp */}
             <a
               href="https://wa.me/447482795318"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+              className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
             >
-              Chat on WhatsApp
+              WhatsApp
             </a>
           </div>
         </motion.div>

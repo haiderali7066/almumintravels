@@ -1,4 +1,6 @@
-import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react"
+import Link from "next/link";
+
+import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,7 +11,8 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Al Mumin Travels UK</h3>
             <p className="text-sm text-background/70 leading-relaxed">
-              Your trusted partner for Umrah and Hajj pilgrimages. Delivering excellence in Islamic travel since 2008.
+              Your trusted partner for Umrah and Hajj pilgrimages. Delivering
+              excellence in Islamic travel since 2008.
             </p>
           </div>
 
@@ -18,29 +21,57 @@ export function Footer() {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
-                <a href="#home" className="hover:text-background transition">
+                <Link href="/home" className="hover:text-background transition">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#umrah" className="hover:text-background transition">
+                <Link
+                  href="/umrah-packages"
+                  className="hover:text-background transition"
+                >
                   Umrah Packages
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#hajj" className="hover:text-background transition">
+                <Link
+                  href="/hajj-packages"
+                  className="hover:text-background transition"
+                >
                   Hajj Packages
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-background transition">
+                <Link
+                  href="/guide"
+                  className="hover:text-background transition"
+                >
+                  Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/halal-tours"
+                  className="hover:text-background transition"
+                >
+                  Halal Tours
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-background transition"
+                >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-background transition">
+                <Link
+                  href="/contact"
+                  className="hover:text-background transition"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -51,14 +82,20 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="tel:+447482795318" className="hover:text-background transition">
+                <a
+                  href="tel:+447482795318"
+                  className="hover:text-background transition"
+                >
                   +44 7482 795318
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
-                <a href="mailto:Info@alhmumintravel.com" className="hover:text-background transition">
-                  Info@alhmumintravel.com
+                <a
+                  href="mailto:Info@almumintravels.com"
+                  className="hover:text-background transition"
+                >
+                  Info@almumintravels.com
                 </a>
               </li>
             </ul>
@@ -72,13 +109,17 @@ export function Footer() {
                 <MapPin size={16} className="shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-background">Near London</p>
-                  <p>9a, 1st Floor, Waterborne Walk, Leighton Buzzard, LU7 1DH</p>
+                  <p>
+                    9a, 1st Floor, Waterborne Walk, Leighton Buzzard, LU7 1DH
+                  </p>
                 </div>
               </div>
               <div className="flex gap-2">
                 <MapPin size={16} className="shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-background">Near Manchester</p>
+                  <p className="font-semibold text-background">
+                    Near Manchester
+                  </p>
                   <p>302 Colne Road, Burnley, BB10 1DZ</p>
                 </div>
               </div>
@@ -88,7 +129,9 @@ export function Footer() {
 
         {/* Social & Bottom */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm text-background/60">© 2026 Al Mumin Travels UK. All rights reserved.</p>
+          <p className="text-sm text-background/60">
+            © 2026 Al Mumin Travels UK. All rights reserved.
+          </p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <a
               href="https://www.instagram.com/almumintravelsuk"
@@ -110,5 +153,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
