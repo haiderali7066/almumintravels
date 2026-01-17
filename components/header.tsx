@@ -13,6 +13,7 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "Umrah", href: "/umrah-packages" },
     { label: "Hajj", href: "/hajj-packages" },
+    { label: "Halal Tours ", href: "/halal-tours" },
     { label: "Guide", href: "/guide" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
