@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageCircle, MessageSquare, X } from "lucide-react"
+import { MessageCircle, Bot, X } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 
 export function FloatingButtons() {
@@ -75,21 +75,22 @@ export function FloatingButtons() {
         className="fixed bottom-8 right-8 md:bottom-10 md:right-10 z-50 w-14 h-14 md:w-16 md:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110"
         aria-label="Chat on WhatsApp"
       >
-        <MessageSquare size={28} fill="currentColor" />
+      <MessageCircle size={28} />
+      
       </a>
 
       {/* Chat Floating Button */}
       <button
         onClick={() => setShowChat(!showChat)}
-        className="fixed bottom-24 md:bottom-28 right-8 md:right-10 z-50 w-14 h-14 md:w-16 md:h-16 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110"
+        className="fixed bottom-8 md:bottom-10 left-8 md:left-10 z-50 w-14 h-14 md:w-16 md:h-16 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110"
         aria-label="Open chat"
       >
-        <MessageCircle size={28} />
+        <Bot size={28} fill="currentColor" />
       </button>
 
       {/* Functional Chat Window */}
       {showChat && (
-        <div className="fixed bottom-40 md:bottom-48 right-8 md:right-10 z-50 w-80 md:w-96 bg-card border border-border rounded-2xl shadow-2xl overflow-hidden animate-scale-in flex flex-col max-h-96">
+        <div className="fixed bottom-10 md:bottom-28 left-8 md:left-10 z-50 w-80 md:w-96 bg-card border border-border rounded-2xl shadow-2xl overflow-hidden animate-scale-in flex flex-col max-h-96">
           {/* Chat Header */}
           <div className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground p-4">
             <div className="flex items-center justify-between">

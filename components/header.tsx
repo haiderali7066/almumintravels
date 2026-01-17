@@ -14,6 +14,7 @@ export function Header() {
     { label: "Umrah", href: "/umrah-packages" },
     { label: "Hajj", href: "/hajj-packages" },
     { label: "Halal Tours ", href: "/halal-tours" },
+    { label: "Ziyarats", href: "/ziyarats" },
     { label: "Guide", href: "/guide" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
@@ -71,7 +72,7 @@ export function Header() {
             href="/"
             className="text-2xl md:text-3xl font-bold text-[#0f2f24] tracking-tight hover:text-[#c9a24d] transition"
           >
-            Al Mumin
+            Al Mumin Travels
           </Link>
 
           {/* Desktop Menu */}

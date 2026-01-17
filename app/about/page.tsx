@@ -2,9 +2,35 @@
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, Zap, Trophy } from "lucide-react";
+import {
+  CheckCircle,
+  Users,
+  Zap,
+  Trophy,
+  Globe,
+  Hotel,
+  Truck,
+  Airplay,
+} from "lucide-react";
 import { motion } from "framer-motion";
+
+// Dummy logos — replace with real image URLs in public/logos/
+const airlineLogos = [
+  "https://upload.wikimedia.org/wikipedia/commons/0/0e/Qatar_Airways_Logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c5/Emirates_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/3/3a/Saudi_Arabian_Airlines_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/7/7d/Turkish_Airlines_Logo.svg",
+ 
+];
+
+const hotelLogos = [
+  "https://upload.wikimedia.org/wikipedia/commons/1/1b/Hilton_Hotels_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/2/22/DoubleTree_by_Hilton_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Swissotel_Logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/99/Marriott_International_Logo.svg",
+
+];
+
 
 export default function About() {
   const values = [
@@ -41,6 +67,34 @@ export default function About() {
     { number: "24/7", label: "Support Available" },
   ];
 
+  const whyChoose = [
+    {
+      title: "Expert Bilingual Religious Guides",
+      description:
+        "Our guides are fully trained in both English and Arabic, providing clear instructions and spiritual guidance throughout your journey.",
+    },
+    {
+      title: "Hand-Picked Hotels Near Haram",
+      description:
+        "We select hotels that are comfortable, well-rated, and conveniently located near the Holy Mosques in Makkah and Madinah.",
+    },
+    {
+      title: "24/7 UK & On-Ground Support",
+      description:
+        "From departure to return, our team is available around the clock to address any queries, emergencies, or assistance requests.",
+    },
+    {
+      title: "Flexible Family & Group Packages",
+      description:
+        "We offer tailored packages for individuals, families, and groups with options to customize duration, hotel, and transport.",
+    },
+    {
+      title: "Atol Protected Packages",
+      description:
+        "Pilgrims receive comprehensive instructions, checklists, and tips to ensure a smooth and spiritually fulfilling journey.",
+    },
+  ];
+
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -50,11 +104,9 @@ export default function About() {
     <main className="w-full">
       <Header />
 
-      {/* ================= HERO SECTION ================= */}
+      {/* HERO */}
       <section className="relative py-12 md:py-24 px-4 overflow-hidden bg-[#0f2f24]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f2f24] via-[#0f2f24] to-black/90" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-40 bg-gradient-to-t from-[#c9a24d]/20 to-transparent blur-3xl" />
-
         <div className="relative max-w-4xl mx-auto text-center space-y-6">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -65,7 +117,6 @@ export default function About() {
           >
             About <span className="text-[#c9a24d]">Al Mumin Travels</span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,59 +127,20 @@ export default function About() {
             Your trusted UK-based partner for spiritually fulfilling Umrah and
             Hajj journeys for over 15 years.
           </motion.p>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.12 } },
-            }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"
-          >
-            {[
-              { icon: Trophy, text: "15+ Years Experience" },
-              { icon: Users, text: "5,000+ Pilgrims Served" },
-              { icon: CheckCircle, text: "Trusted & Certified" },
-              { icon: Zap, text: "24/7 Support" },
-            ].map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  className="flex items-center justify-center gap-2
-                    bg-white/95 backdrop-blur
-                    border border-[#c9a24d]/30
-                    rounded-full px-4 py-2
-                    shadow-md"
-                >
-                  <Icon size={16} className="text-[#c9a24d]" />
-                  <span className="text-xs md:text-sm text-[#0f2f24] font-medium">
-                    {item.text}
-                  </span>
-                </motion.div>
-              );
-            })}
-          </motion.div>
         </div>
       </section>
 
-      {/* ================= STATS ================= */}
+      {/* STATS */}
       <section className="py-12 md:py-16 px-4 bg-primary/5">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-          {stats.map((stat, index) => (
+          {stats.map((stat, idx) => (
             <motion.div
-              key={index}
+              key={idx}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
               <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
                 {stat.number}
@@ -141,46 +153,44 @@ export default function About() {
         </div>
       </section>
 
-      {/* ================= STORY ================= */}
+      {/* STORY */}
       <section className="py-12 md:py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Story</h2>
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
-            <p className="text-lg">
-              Al Mumin Travels UK was established with a singular vision: to
-              provide UK-based Muslim pilgrims with accessible, affordable, and
-              exceptional Islamic travel experiences.
-            </p>
-            <p className="text-lg">
-              Umrah and Hajj are not just journeys — they are spiritual
-              transformations. We manage every detail so you can focus entirely
-              on worship and devotion.
-            </p>
-            <p className="text-lg">
-              Thousands of satisfied pilgrims later, our mission remains
-              unchanged: sincerity, excellence, and care.
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
+          <p>
+            Al Mumin Travels UK was established with a singular vision: to
+            provide UK-based Muslim pilgrims with accessible, affordable, and
+            exceptional Islamic travel experiences.
+          </p>
+          <p>
+            Umrah and Hajj are not just journeys — they are spiritual
+            transformations. We manage every detail so you can focus entirely on
+            worship and devotion.
+          </p>
+          <p>
+            Thousands of satisfied pilgrims later, our mission remains
+            unchanged: sincerity, excellence, and care.
+          </p>
         </div>
       </section>
 
-      {/* ================= VALUES ================= */}
-      <section className="py-12 md:py-20 px-4 bg-muted/50">
+      {/* CORE VALUES */}
+      <section className="py-12 md:py-20 px-4 bg-[#0f2f24]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl text-white font-bold mb-12 text-center">
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {values.map((value, index) => {
+            {values.map((value, idx) => {
               const Icon = value.icon;
               return (
                 <motion.div
-                  key={index}
+                  key={idx}
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: idx * 0.1 }}
                   className="bg-card border rounded-2xl p-6 md:p-8 hover:shadow-lg hover:border-primary/50 transition"
                 >
                   <div className="flex gap-4">
@@ -201,33 +211,103 @@ export default function About() {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE ================= */}
-      <section className="py-12 md:py-20 px-4">
+      {/* WHY CHOOSE */}
+      <section className="py-12 md:py-20 px-4 bg-primary/5">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             Why Choose Al Mumin?
           </h2>
-          <div className="space-y-4">
-            {[
-              "Expert bilingual religious guides",
-              "Hand-picked hotels near Haram",
-              "24/7 UK & on-ground support",
-              "Flexible family & group packages",
-              "Complete pre-departure guidance",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-4 items-start p-4 rounded-lg bg-muted/30"
+          <div className="space-y-6">
+            {whyChoose.map((item, idx) => (
+              <motion.div
+                key={idx}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="flex gap-4 items-start p-6 rounded-lg bg-black/10 border border-primary/30"
               >
-                <CheckCircle className="w-6 h-6 text-primary mt-1" />
-                <p className="text-lg text-muted-foreground">{item}</p>
-              </div>
+                <CheckCircle className="w-6 h-6 text-[#c9a24d] mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold text-black mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      {/* PARTNERS - AIRLINES */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+            Our Trusted Airline Partners
+          </h2>
+          <p className="text-center text-muted-foreground mb-6">
+            We Work with the World’s Leading Airlines to Ensure Safe and
+            Comfortable Journeys.
+          </p>
+          <div className="flex gap-6 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-muted/20">
+            {airlineLogos.map((logo, idx) => (
+              <img
+                key={idx}
+                src={logo}
+                alt="Airline Logo"
+                className="h-16 w-auto flex-shrink-0 object-contain"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS - HOTELS */}
+      <section className="py-12 md:py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+            Our Hotel Partners
+          </h2>
+          <p className="text-center text-muted-foreground mb-6">
+            Partnered with the World’s Leading Hospitality Brands.
+          </p>
+          <div className="flex gap-6 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-muted/20">
+            {hotelLogos.map((logo, idx) => (
+              <img
+                key={idx}
+                src={logo}
+                alt="Hotel Logo"
+                className="h-16 w-auto flex-shrink-0 object-contain"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRANSPORT */}
+      <section className="py-12 md:py-20 px-4 bg-primary/5">
+        <div className="max-w-5xl mx-auto space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+            Transport & Ground Services
+          </h2>
+          <p className="text-center text-muted-foreground">
+            Comfortable, Modern & Reliable Travel Solutions in Saudi Arabia.
+            From airport transfers to Ziyarat tours, our professional fleet and
+            drivers ensure safety and comfort.
+          </p>
+          <ul className="list-disc list-inside text-muted-foreground space-y-1 max-w-2xl mx-auto">
+            <li>Private & Group Airport Transfers</li>
+            <li>Modern VIP Coaches for Ziyarat Tours</li>
+            <li>Luxury Cars & Family Vans</li>
+            <li>Chauffeur Services with English/Urdu-speaking Drivers</li>
+            <li>24/7 On-Ground Coordination with Our Saudi Team</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="relative py-12 md:py-24 px-4 overflow-hidden bg-[#0f2f24]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -240,30 +320,23 @@ export default function About() {
             Ready for Your{" "}
             <span className="text-[#c9a24d]">Spiritual Journey?</span>
           </h2>
-
           <p className="text-lg text-white/85 max-w-2xl mx-auto">
             Speak with our experienced advisors and receive personalized Umrah
             or Hajj guidance today.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            {/* Get in Touch (Email) */}
             <a
               href="mailto:Info@almumintravels.co.uk?subject=Inquiry"
               className="rounded-full px-8 py-3 text-lg bg-[#c9a24d] text-[#0f2f24] hover:bg-[#b8923f] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
             >
               Get in Touch
             </a>
-
-            {/* Call Now */}
             <a
               href="tel:+447482795318"
               className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
             >
               Call Us Now
             </a>
-
-            {/* WhatsApp */}
             <a
               href="https://wa.me/447482795318"
               target="_blank"
