@@ -241,19 +241,19 @@ export default function About() {
             {[
               {
                 name: "Qatar Airways",
-                logo: "https://images.pexels.com/photos/32877113/pexels-photo-32877113.jpeg",
+                logo: "q.jpeg",
               },
               {
                 name: "Saudi Airlines",
-                logo: "https://images.pexels.com/photos/11984256/pexels-photo-11984256.jpeg",
+                logo: "s.jpeg",
               },
               {
-                name: "Emirates",
-                logo: "https://images.pexels.com/photos/13034092/pexels-photo-13034092.jpeg",
+                name: "Emirates Airlines",
+                logo: "e.jpeg",
               },
               {
-                name: "International Airlines",
-                logo: "https://images.pexels.com/photos/33902217/pexels-photo-33902217.jpeg",
+                name: "British Airlines",
+                logo: "b.jpeg",
               },
             ].map((airline, idx) => (
               <div
@@ -287,20 +287,24 @@ export default function About() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
             {[
               {
-                name: "Hilton Makkah",
-                logo: "https://images.pexels.com/photos/5659779/pexels-photo-5659779.jpeg",
+                name: "Marriott Hotel",
+                logo: "h1.jpeg",
               },
               {
-                name: "Makkah Marriott",
-                logo: "https://images.pexels.com/photos/35299524/pexels-photo-35299524.jpeg",
+                name: "Emaar Hotel",
+                logo: "h2.jpeg",
               },
               {
-                name: "Pullman ZamZam",
-                logo: "https://images.pexels.com/photos/28558770/pexels-photo-28558770.jpeg",
+                name: "Hayatt Hotel",
+                logo: "h3.jpeg",
               },
               {
-                name: "Swissôtel Makkah",
-                logo: "https://images.pexels.com/photos/7942132/pexels-photo-7942132.jpeg",
+                name: "Ealf Hotel",
+                logo: "h4.jpeg",
+              },
+              {
+                name: "Movenpick Hotel",
+                logo: "h5.jpeg",
               },
             ].map((hotel, idx) => (
               <div
