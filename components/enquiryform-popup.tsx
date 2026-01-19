@@ -18,7 +18,11 @@ export function EnquiryPopup() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
-      <div className="relative w-full max-w-3xl animate-fade-in">
+      <div
+        className="relative w-full max-w-3xl animate-fade-in 
+                      bg-white rounded-lg shadow-lg 
+                      max-h-[90vh] md:max-h-[80vh] overflow-auto"
+      >
         {/* Close Button */}
         <button
           onClick={() => setOpen(false)}
