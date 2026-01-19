@@ -70,15 +70,17 @@ export function Header() {
       <nav className="bg-white border-b border-[#c9a24d]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/logo.jpeg"
               alt="Al Mumin Travels Logo"
-              width={160}
-              height={60}
-              className="h-10 md:h-12 w-auto object-contain"
-              priority
+              width={140}
+              height={50}
+              className="h-10 md:h-12 w-auto"
             />
+            <span className=" sm:block text-xl font-bold text-[#0f2f24]">
+              Al Mumin Travels
+            </span>
           </Link>
 
           {/* Desktop Menu */}

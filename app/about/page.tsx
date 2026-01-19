@@ -14,22 +14,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Dummy logos — replace with real image URLs in public/logos/
-const airlineLogos = [
-  "https://upload.wikimedia.org/wikipedia/commons/0/0e/Qatar_Airways_Logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c5/Emirates_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/3/3a/Saudi_Arabian_Airlines_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/7/7d/Turkish_Airlines_Logo.svg",
- 
-];
 
-const hotelLogos = [
-  "https://upload.wikimedia.org/wikipedia/commons/1/1b/Hilton_Hotels_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/2/22/DoubleTree_by_Hilton_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c6/Swissotel_Logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/99/Marriott_International_Logo.svg",
-
-];
 
 
 export default function About() {
@@ -247,18 +232,43 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Our Trusted Airline Partners
           </h2>
-          <p className="text-center text-muted-foreground mb-6">
+          <p className="text-center text-muted-foreground mb-12">
             We Work with the World’s Leading Airlines to Ensure Safe and
             Comfortable Journeys.
           </p>
-          <div className="flex gap-6 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-muted/20">
-            {airlineLogos.map((logo, idx) => (
-              <img
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
+            {[
+              {
+                name: "Qatar Airways",
+                logo: "https://images.pexels.com/photos/32877113/pexels-photo-32877113.jpeg",
+              },
+              {
+                name: "Saudi Airlines",
+                logo: "https://images.pexels.com/photos/11984256/pexels-photo-11984256.jpeg",
+              },
+              {
+                name: "Emirates",
+                logo: "https://images.pexels.com/photos/13034092/pexels-photo-13034092.jpeg",
+              },
+              {
+                name: "International Airlines",
+                logo: "https://images.pexels.com/photos/33902217/pexels-photo-33902217.jpeg",
+              },
+            ].map((airline, idx) => (
+              <div
                 key={idx}
-                src={logo}
-                alt="Airline Logo"
-                className="h-16 w-auto flex-shrink-0 object-contain"
-              />
+                className="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition"
+              >
+                <img
+                  src={airline.logo}
+                  alt={airline.name}
+                  className="h-16 w-auto object-contain mb-2"
+                />
+                <span className="text-center font-medium text-sm">
+                  {airline.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -270,17 +280,42 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Our Hotel Partners
           </h2>
-          <p className="text-center text-muted-foreground mb-6">
-            Partnered with the World’s Leading Hospitality Brands.
+          <p className="text-center text-muted-foreground mb-12">
+            Partnered with the World’s Leading Hospitality Brands in Makkah.
           </p>
-          <div className="flex gap-6 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-muted/20">
-            {hotelLogos.map((logo, idx) => (
-              <img
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
+            {[
+              {
+                name: "Hilton Makkah",
+                logo: "https://images.pexels.com/photos/5659779/pexels-photo-5659779.jpeg",
+              },
+              {
+                name: "Makkah Marriott",
+                logo: "https://images.pexels.com/photos/35299524/pexels-photo-35299524.jpeg",
+              },
+              {
+                name: "Pullman ZamZam",
+                logo: "https://images.pexels.com/photos/28558770/pexels-photo-28558770.jpeg",
+              },
+              {
+                name: "Swissôtel Makkah",
+                logo: "https://images.pexels.com/photos/7942132/pexels-photo-7942132.jpeg",
+              },
+            ].map((hotel, idx) => (
+              <div
                 key={idx}
-                src={logo}
-                alt="Hotel Logo"
-                className="h-16 w-auto flex-shrink-0 object-contain"
-              />
+                className="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition"
+              >
+                <img
+                  src={hotel.logo}
+                  alt={hotel.name}
+                  className="h-16 w-auto object-contain mb-2"
+                />
+                <span className="text-center font-medium text-sm">
+                  {hotel.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>
