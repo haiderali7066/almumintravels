@@ -29,6 +29,7 @@ export default function Home() {
       <FAQ />
       <CTASection />
       <Footer />
+      
     </main>
   )
 }
