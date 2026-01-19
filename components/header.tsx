@@ -4,6 +4,8 @@ import { Mail, Phone, Instagram, Facebook, Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
@@ -68,11 +70,15 @@ export function Header() {
       <nav className="bg-white border-b border-[#c9a24d]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="text-2xl md:text-3xl font-bold text-[#0f2f24] tracking-tight hover:text-[#c9a24d] transition"
-          >
-            Al Mumin Travels
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.jpeg"
+              alt="Al Mumin Travels Logo"
+              width={160}
+              height={60}
+              className="h-10 md:h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Menu */}

@@ -112,6 +112,44 @@ const packageData: Record<string, PackageCard[]> = {
       price: "£899",
     },
   ],
+  hajj: [
+    {
+      nights: 14,
+      hotel: "5 Star Hotels In Makkah & Madinah",
+      amenities: [
+        "Flights",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Guided Ziarats",
+        "Hajj Guidance & Ritual Support",
+      ],
+      price: "£2,499",
+    },
+    {
+      nights: 21,
+      hotel: "4 Star Hotels In Makkah & Madinah",
+      amenities: [
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Guided Ziarats",
+        "Hajj Guidance & Ritual Support",
+      ],
+      price: "£2,999",
+    },
+    {
+      nights: 28,
+      hotel: "3 Star Hotels In Makkah & Madinah",
+      amenities: [
+        "Return Flight Tickets",
+        "Visa Assistance",
+        "All Ground Transport",
+        "Guided Ziarats",
+        "Hajj Guidance & Ritual Support",
+      ],
+      price: "£3,499",
+    },
+  ],
 };
 
 

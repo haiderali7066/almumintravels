@@ -119,7 +119,7 @@ export default function HajjPackages() {
       </section>
 
       {/* ================= FEATURES ================= */}
-      <section className="py-12 md:py-16 px-4 bg-[#fff8e1]">
+      <section className="py-12 md:py-16 px-4 bg-[#eaf5f0]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0f2f24] mb-10 text-center">
             Why Choose Our Hajj Packages
