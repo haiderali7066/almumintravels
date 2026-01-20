@@ -13,11 +13,11 @@ export function Header() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Umrah", href: "/umrah-packages" },
-    { label: "Hajj", href: "/hajj-packages" },
+    { label: "Umrah Packages", href: "/umrah-packages" },
+    { label: "Hajj Packages", href: "/hajj-packages" },
     { label: "Halal Tours ", href: "/halal-tours" },
     { label: "Ziyarats", href: "/ziyarats" },
-    { label: "Guide", href: "/guide" },
+    { label: "Hajj Guide", href: "/guide" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
