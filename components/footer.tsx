@@ -114,7 +114,7 @@ export function Footer() {
                 </div>
               </div>
 
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2">
                 <MapPin size={16} className="mt-1 shrink-0" />
                 <div>
                   <p className="font-semibold text-background">
@@ -122,7 +122,7 @@ export function Footer() {
                   </p>
                   <p>302 Colne Road, Burnley, BB10 1DZ</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Payments */}
