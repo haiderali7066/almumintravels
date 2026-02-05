@@ -8,29 +8,19 @@ import Script from "next/script";
 
 import "./globals.css";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   title: "Al Mumin Travels UK - Umrah & Hajj Packages",
   description:
     "Premium Islamic travel services for Umrah and Hajj packages from UK. Trusted pilgrimage experiences with UK-based support.",
-  generator: "Haider/ Devntom solutions",
+  generator: "Haider / Devntom Solutions",
   icons: {
-    icon: [
-      {
-        url: "/logo.jpeg",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/logo.jpeg",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/logo.jpeg",
-        type: "image/svg+xml",
-      },
-    ],
+    icon: [{ url: "/logo.jpeg" }],
     apple: "/logo.jpeg",
   },
 };
@@ -39,24 +29,26 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
+      <body className="font-sans antialiased">
         {children}
-        <EnquiryPopup /> {/* Popup Form */}
+
+        {/* Global UI Components */}
+        <EnquiryPopup />
         <FloatingButtons />
         <Analytics />
+
         {/* Tawk.to Chat Widget */}
         <Script
-          id="tawkto-chat"
+          id="tawk-to"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
               (function(){
-                var s1=document.createElement("script"),
-                    s0=document.getElementsByTagName("script")[0];
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
                 s1.async=true;
-                s1.src='https://embed.tawk.to/696e0560861b0619804b16ac/1jfasa13k';
+                s1.src='https://embed.tawk.to/6984d0d30c93d31c2fc1ce93/1jgncvfnk';
                 s1.charset='UTF-8';
                 s1.setAttribute('crossorigin','*');
                 s0.parentNode.insertBefore(s1,s0);
