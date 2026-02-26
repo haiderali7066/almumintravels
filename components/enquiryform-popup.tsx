@@ -26,7 +26,7 @@ export function EnquiryPopup() {
         {/* Close Button */}
         <button
           onClick={() => setOpen(false)}
-          className="absolute -top-4 -right-4 bg-white text-black w-10 h-10 rounded-full shadow-lg hover:bg-red-500 hover:text-white transition"
+          className="absolute -top-2 -right-2 bg-white text-black w-10 h-10 rounded-full shadow-lg hover:bg-red-500 hover:text-white transition"
         >
           ✕
         </button>
