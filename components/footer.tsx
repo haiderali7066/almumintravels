@@ -179,7 +179,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row items-center justify-between mt-6">
           <p className="text-sm text-background/60">
-            © 2026 Al Mumin Travels UK. All rights reserved.
+            © 2026 Al Mumin Travels UK. All rights reserved.  Develooped by Devntom Solutions
           </p>
 
           <div className="flex items-center gap-4 mt-4 md:mt-0">

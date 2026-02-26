@@ -14,14 +14,37 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-export const metadata: Metadata = {
-  title: "Al Mumin Travels UK - Umrah & Hajj Packages",
+export const metadata = {
+  title: {
+    default: "Al Mumin Travels – Trusted Hajj & Umrah Services",
+    template: "%s | Al Mumin Travels"
+  },
   description:
-    "Premium Islamic travel services for Umrah and Hajj packages from UK. Trusted pilgrimage experiences with UK-based support.",
-  generator: "Haider / Devntom Solutions",
-  icons: {
-    icon: [{ url: "/logo.jpeg" }],
-    apple: "/logo.jpeg",
+    "Al Mumin Travels provides trusted Hajj and Umrah packages, visa processing, airline ticketing, and hotel booking services with affordable prices and complete guidance.",
+  keywords: [
+    "Al Mumin Travels",
+    "Umrah Packages Pakistan",
+    "Hajj Packages Pakistan",
+    "Saudi Visa Processing",
+    "Air Ticket Booking",
+    "Travel Agency Pakistan"
+  ],
+  metadataBase: new URL("https://almumintravels.com"),
+  openGraph: {
+    title: "Al Mumin Travels – Trusted Hajj & Umrah Services",
+    description:
+      "Book reliable Hajj and Umrah packages with complete travel support and guidance.",
+    url: "https://almumintravels.com",
+    siteName: "Al Mumin Travels",
+    locale: "en_PK",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: "ADD_GOOGLE_VERIFICATION_CODE_HERE",
   },
 };
 
@@ -49,7 +72,7 @@ export default function RootLayout({
                 var s1 = document.createElement("script"),
                     s0 = document.getElementsByTagName("script")[0];
                 s1.async = true;
-                s1.src = 'https://embed.tawk.to/69a03f7e2b22dd1c3aff07d3/1jicvg22f';
+                s1.src = 'https://embed.tawk.to/69a0416342971f1c3a86026f/1jicvur7h';
                 s1.charset = 'UTF-8';
                 s1.setAttribute('crossorigin','*');
                 s0.parentNode.insertBefore(s1, s0);

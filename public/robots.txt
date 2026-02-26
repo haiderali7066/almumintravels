@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://almumintravels.com/sitemap.xml
