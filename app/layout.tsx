@@ -44,14 +44,15 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
               (function(){
-                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/6984dc5944bf221c35ba77df/1jgncvfnk';
-                s1.charset='UTF-8';
+                var s1 = document.createElement("script"),
+                    s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/69a03f7e2b22dd1c3aff07d3/1jicvg22f';
+                s1.charset = 'UTF-8';
                 s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
+                s0.parentNode.insertBefore(s1, s0);
               })();
             `,
           }}
