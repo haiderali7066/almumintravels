@@ -217,9 +217,15 @@ export function PackageGrid({ title, tier }: { title: string; tier: string }) {
                   </p>
                 </div>
 
-                <Button className="w-full h-11 rounded-full bg-[#c9a24d] text-black font-semibold hover:bg-white transition">
-                  Enquire Now
-                </Button>
+                <a
+  href="https://wa.me/923267163078"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="w-full h-11 rounded-full bg-[#c9a24d] text-black font-semibold hover:bg-white transition">
+    Enquire Now
+  </Button>
+</a>
               </div>
             </motion.div>
           ))}

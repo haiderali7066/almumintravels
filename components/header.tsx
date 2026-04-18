@@ -94,9 +94,16 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <a
+  href="https://wa.me/923267163078"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
             <Button className="ml-4 bg-[#c9a24d] hover:bg-[#ffd95b] text-black text-sm h-9 rounded-full px-6 transition">
               Get Quote
             </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -130,11 +137,14 @@ export function Header() {
                   </Link>
                 ))}
                 <Button
-                  className="w-full mt-3 bg-[#c9a24d] hover:bg-[#ffd95b] text-black text-sm h-9 rounded-full transition"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get Quote
-                </Button>
+  className="w-full mt-3 bg-[#c9a24d] hover:bg-[#ffd95b] text-black text-sm h-9 rounded-full transition"
+  onClick={() => {
+    setMobileMenuOpen(false);
+    window.open("https://wa.me/923267163078", "_blank");
+  }}
+>
+  Get Quote
+</Button>
               </div>
             </motion.div>
           )}
