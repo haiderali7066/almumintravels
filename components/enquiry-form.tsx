@@ -1,9 +1,9 @@
 "use client";
 
 import type React from "react";
-import { Button } from "@/components/ui/button";
-import { MessageCircle, PhoneCall } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export function EnquiryForm() {
   const [formData, setFormData] = useState({
@@ -63,117 +63,141 @@ export function EnquiryForm() {
   };
 
   return (
-    <section className="py-12 px-4 sm:px-6 md:py-20 bg-white">
-      <div className="max-w-2xl mx-auto">
+    <section className="bg-white px-4 py-12 sm:px-6 md:py-20">
+      <div className="mx-auto max-w-2xl">
         {/* Heading */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-3">
-            Get Your <span className="text-[#c9a24d]">Free Quote</span>
+        <div className="mb-10 text-center">
+          <h2 className="mb-3 text-3xl font-light tracking-tight text-slate-950 md:text-4xl">
+            Get Your <span className="font-semibold text-[#c9a24d]">Free Quote</span>
           </h2>
-          <p className="text-sm md:text-base text-black/70">
-            Tell us about your pilgrimage and we’ll send you a personalized
-            package
+          <p className="text-sm text-slate-600 md:text-base">
+            Tell us about your pilgrimage and we will send you a personalized package.
           </p>
         </div>
 
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-[#0f2f24] rounded-2xl p-6 md:p-8 space-y-4 shadow-xl"
+          className="space-y-5 rounded-2xl bg-[#0f2f24] p-6 shadow-xl md:p-8"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
-            />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 px-1">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full rounded-full border border-[#c9a24d]/30 bg-white/95 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#c9a24d] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c9a24d]/20 transition-all"
+              />
+            </div>
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 px-1">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full rounded-full border border-[#c9a24d]/30 bg-white/95 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#c9a24d] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c9a24d]/20 transition-all"
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
-            />
-            <input
-              type="number"
-              name="passengers"
-              placeholder="Number of Passengers"
-              value={formData.passengers}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
-            />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 px-1">Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full rounded-full border border-[#c9a24d]/30 bg-white/95 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#c9a24d] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c9a24d]/20 transition-all"
+              />
+            </div>
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 px-1">Passengers</label>
+              <input
+                type="number"
+                name="passengers"
+                placeholder="Number of Passengers"
+                value={formData.passengers}
+                onChange={handleChange}
+                required
+                className="w-full rounded-full border border-[#c9a24d]/30 bg-white/95 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#c9a24d] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c9a24d]/20 transition-all"
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <select
-              name="packageType"
-              value={formData.packageType}
-              onChange={handleChange}
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
-            >
-              <option value="5-star">5-Star Package</option>
-              <option value="4-star">4-Star Package</option>
-              <option value="3-star">3-Star Package</option>
-            </select>
-            <input
-              type="text"
-              name="departureAirport"
-              placeholder="Departure Airport"
-              value={formData.departureAirport}
-              onChange={handleChange}
-              className="w-full px-4 py-3 text-sm rounded-full bg-white text-black placeholder:text-black/50 border border-[#c9a24d]/40 focus:outline-none focus:ring-2 focus:ring-[#c9a24d]"
-            />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 px-1">Package Tier</label>
+              <div className="relative">
+                <select
+                  name="packageType"
+                  value={formData.packageType}
+                  onChange={handleChange}
+                  className="w-full rounded-full border border-[#c9a24d]/30 bg-white/95 px-4 py-2.5 text-sm text-slate-900 focus:border-[#c9a24d] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c9a24d]/20 transition-all appearance-none"
+                >
+                  <option value="5-star">5-Star Package</option>
+                  <option value="4-star">4-Star Package</option>
+                  <option value="3-star">3-Star Package</option>
+                </select>
+              </div>
+            </div>
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 px-1">Departure Airport</label>
+              <input
+                type="text"
+                name="departureAirport"
+                placeholder="Departure Airport"
+                value={formData.departureAirport}
+                onChange={handleChange}
+                className="w-full rounded-full border border-[#c9a24d]/30 bg-white/95 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#c9a24d] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c9a24d]/20 transition-all"
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 pt-4">
+          {/* Premium Grid Action System */}
+          <div className="grid grid-cols-1 gap-3 pt-4 sm:grid-cols-3">
             <Button
               type="submit"
               disabled={loading || sent}
-              className={`flex-1 rounded-full font-semibold transition
-                ${sent ? "bg-green-500 text-white" : "bg-[#c9a24d] text-black hover:bg-white"}
+              className={`w-full rounded-full h-11 text-sm font-bold tracking-wide shadow-md transition-all duration-200
+                ${sent 
+                  ? "bg-emerald-600 text-white hover:bg-emerald-700" 
+                  : "bg-[#c9a24d] text-[#0f2f24] hover:bg-white hover:text-black"
+                }
               `}
             >
-              {loading ? "Sending..." : sent ? "Sent ✓" : "Submit"}
+              {loading ? "Sending..." : sent ? "Sent" : "Submit"}
             </Button>
 
             <a
-              href="https://wa.me/447482795318"
+              href="https://wa.me/442033556230"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full"
             >
               <Button
                 type="button"
-                className="w-full rounded-full border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d] hover:text-black transition flex items-center justify-center gap-2"
+                className="w-full rounded-full h-11 border border-[#c9a24d]/60 bg-transparent text-[#c9a24d] hover:bg-[#c9a24d] hover:text-[#0f2f24] transition-all duration-200 flex items-center justify-center gap-2 text-sm font-semibold tracking-wide"
               >
-                <MessageCircle size={18} /> WhatsApp
+                <FaWhatsapp size={16} /> WhatsApp
               </Button>
             </a>
 
-            <a href="tel:+447482795318">
+            <a href="tel:+442033556230" className="w-full">
               <Button
                 type="button"
-                className="w-full rounded-full border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d] hover:text-black transition flex items-center justify-center gap-2"
+                className="w-full rounded-full h-11 border border-[#c9a24d]/60 bg-transparent text-[#c9a24d] hover:bg-[#c9a24d] hover:text-[#0f2f24] transition-all duration-200 flex items-center justify-center gap-2 text-sm font-semibold tracking-wide"
               >
-                <PhoneCall size={18} /> Call
+                <FaPhoneAlt size={13} /> Call Now
               </Button>
             </a>
           </div>

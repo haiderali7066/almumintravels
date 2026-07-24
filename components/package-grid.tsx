@@ -218,7 +218,7 @@ export function PackageGrid({ title, tier }: { title: string; tier: string }) {
                 </div>
 
                 <a
-  href="https://wa.me/923267163078"
+  href="https://wa.me/442033556230"
   target="_blank"
   rel="noopener noreferrer"
 >

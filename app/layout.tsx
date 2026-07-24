@@ -1,58 +1,152 @@
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { FloatingButtons } from "@/components/floating-buttons";
+import FloatingButtons from "@/components/floating-buttons";
 import { EnquiryPopup } from "@/components/enquiryform-popup";
 import Script from "next/script";
 
 import "./globals.css";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
+
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://almumintravels.co.uk"),
+
   title: {
-    default: "Al Mumin Travels – Trusted Hajj & Umrah Services",
-    template: "%s | Al Mumin Travels"
+    default:
+      "Al Mumin Travels | Hajj & Umrah Packages, Visa & Travel Services",
+    template: "%s | Al Mumin Travels",
   },
+
   description:
-    "Al Mumin Travels provides trusted Hajj and Umrah packages, visa processing, airline ticketing, and hotel booking services with affordable prices and complete guidance.",
+    "Al Mumin Travels offers trusted Hajj and Umrah packages, Saudi Arabia visa processing, airline ticket booking, hotel reservations, and complete travel assistance. Plan your spiritual journey with reliable travel support.",
+
   keywords: [
     "Al Mumin Travels",
-    "Umrah Packages Pakistan",
+    "Al Mumin Travel",
+    "Hajj Packages",
+    "Umrah Packages",
     "Hajj Packages Pakistan",
+    "Umrah Packages Pakistan",
+    "Hajj and Umrah Travel Agency",
+    "Umrah Visa Processing",
     "Saudi Visa Processing",
+    "Saudi Arabia Visa",
     "Air Ticket Booking",
-    "Travel Agency Pakistan"
+    "Flight Booking",
+    "Hotel Booking Saudi Arabia",
+    "Makkah Hotel Booking",
+    "Madinah Hotel Booking",
+    "Hajj Travel Services",
+    "Umrah Travel Services",
+    "Travel Agency",
   ],
-  metadataBase: new URL("https://almumintravels.com"),
-  openGraph: {
-    title: "Al Mumin Travels – Trusted Hajj & Umrah Services",
-    description:
-      "Book reliable Hajj and Umrah packages with complete travel support and guidance.",
-    url: "https://almumintravels.com",
-    siteName: "Al Mumin Travels",
-    locale: "en_PK",
-    type: "website",
+
+  authors: [
+    {
+      name: "Al Mumin Travels",
+      url: "https://almumintravels.co.uk",
+    },
+  ],
+
+  creator: "Al Mumin Travels",
+  publisher: "Al Mumin Travels",
+
+  alternates: {
+    canonical: "https://almumintravels.co.uk",
   },
+
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://almumintravels.co.uk",
+    siteName: "Al Mumin Travels",
+    title:
+      "Al Mumin Travels | Trusted Hajj & Umrah Packages & Travel Services",
+    description:
+      "Book Hajj and Umrah packages with Al Mumin Travels. Get visa processing, flights, hotel bookings, and complete travel assistance for your journey.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Al Mumin Travels – Hajj and Umrah Travel Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Al Mumin Travels | Hajj & Umrah Packages & Travel Services",
+    description:
+      "Trusted Hajj and Umrah packages, visa processing, flights, hotels, and complete travel assistance.",
+    images: ["/og-image.jpg"],
+  },
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+
+  icons: {
+    icon: [
+      {
+        url: "/logo.jpeg",
+        sizes: "any",
+      },
+      {
+        url: "/icon.png",
+        type: "image/jpeg",
+        sizes: "32x32",
+      },
+    ],
+    apple: [
+      {
+        url: "/logo.jpeg",
+        sizes: "180x180",
+        type: "image/jpeg",
+      },
+    ],
+  },
+
   verification: {
     google: "ADD_GOOGLE_VERIFICATION_CODE_HERE",
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${geist.variable} ${geistMono.variable}`}
+    >
       <body className="font-sans antialiased">
         {children}
 

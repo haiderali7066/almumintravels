@@ -30,10 +30,10 @@ export function Header() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
             <a
-              href="tel:+447482795318"
+              href="tel:+442033556230"
               className="flex items-center gap-2 hover:opacity-80 transition"
             >
-              <Phone size={16} /> +44 7482 795318
+              <Phone size={16} /> +44 2033 556230
             </a>
             <a
               href="mailto:Info@almumintravels.co.uk"
@@ -95,7 +95,7 @@ export function Header() {
               </Link>
             ))}
             <a
-  href="https://wa.me/923267163078"
+  href="https://wa.me/442033556230"
   target="_blank"
   rel="noopener noreferrer"
 >
@@ -140,7 +140,7 @@ export function Header() {
   className="w-full mt-3 bg-[#c9a24d] hover:bg-[#ffd95b] text-black text-sm h-9 rounded-full transition"
   onClick={() => {
     setMobileMenuOpen(false);
-    window.open("https://wa.me/923267163078", "_blank");
+    window.open("https://wa.me/442033556230", "_blank");
   }}
 >
   Get Quote

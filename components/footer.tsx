@@ -72,8 +72,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="tel:+447482795318" className="hover:text-background">
-                  +44 7482 795318
+                <a href="tel:+442033556230" className="hover:text-background">
+                  +44 2033 556230
                 </a>
               </li>
 
@@ -90,7 +90,7 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <MessageCircle size={16} />
                 <a
-                  href="https://wa.me/447482795318"
+                  href="https://wa.me/442033556230"
                   target="_blank"
                   className="hover:text-background"
                 >

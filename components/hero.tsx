@@ -58,7 +58,7 @@ export function Hero() {
 
           {/* Call Now */}
           <a
-            href="tel:+447482795318"
+            href="tel:+442033556230"
             className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             Book a Tour Now

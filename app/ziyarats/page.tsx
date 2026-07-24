@@ -229,13 +229,13 @@ export default function ZiyaratsPage() {
               Get in Touch
             </a>
             <a
-              href="tel:+447482795318"
+              href="tel:+442033556230"
               className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
             >
               Call Us Now
             </a>
             <a
-              href="https://wa.me/447482795318"
+              href="https://wa.me/442033556230"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full px-8 py-3 text-lg border border-[#c9a24d] text-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
