@@ -112,7 +112,7 @@ export const metadata: Metadata = {
         sizes: "any",
       },
       {
-        url: "/icon.png",
+        url: "/logo.jpeg",
         type: "image/jpeg",
         sizes: "32x32",
       },
@@ -127,8 +127,9 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: "ADD_GOOGLE_VERIFICATION_CODE_HERE",
+    google: "hp7XUC-2EDg3Z2WIW-UU-4GGN0C_V-iskpcRVOT_70Q",
   },
+  
 };
 
 export const viewport: Viewport = {
