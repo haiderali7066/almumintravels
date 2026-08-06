@@ -1,4 +1,7 @@
 User-agent: *
+
 Allow: /
 
-Sitemap: https://almumintravels.com/sitemap.xml
+Sitemap: https://almumintravels.co.uk/sitemap.xml
+
+Host: https://almumintravels.co.uk
