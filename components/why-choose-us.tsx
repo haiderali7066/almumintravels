@@ -7,9 +7,9 @@ const reasons = [
   {
     id: "licensed",
     icon: Award,
-    title: "Licensed & ATOL Protected",
+    title: "Licensed &  Protected",
     description:
-      "Fully compliant with UK travel regulations and ATOL protected packages.",
+      "Fully compliant with UK travel regulations and  protected packages.",
   },
   {
     id: "guides",
