@@ -51,7 +51,7 @@ export function Hero() {
           {/* Gold button */}
           <Link
             href="/umrah-packages"
-            className="rounded-full px-8 py-3 text-lg text-black bg-[#c9a24d] hover:bg-[#c9a24d]/10 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
+            className="rounded-full px-8 py-3 text-lg text-black bg-[#c9a24d] hover:bg-[#c9a24d] transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             Explore Packages
           </Link>

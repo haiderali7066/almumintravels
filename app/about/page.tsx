@@ -73,11 +73,7 @@ export default function About() {
       description:
         "We offer tailored packages for individuals, families, and groups with options to customize duration, hotel, and transport.",
     },
-    {
-      title: "Atol Protected Packages",
-      description:
-        "Pilgrims receive comprehensive instructions, checklists, and tips to ensure a smooth and spiritually fulfilling journey.",
-    },
+    
   ];
 
   const fadeUp = {

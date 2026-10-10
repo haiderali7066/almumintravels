@@ -23,22 +23,7 @@ export function Footer() {
               Your trusted partner for Umrah and Hajj pilgrimages. Delivering
               excellence in Islamic travel since 2008.
             </p>
-            <p className="text-xs text-background/60 leading-relaxed">
-              Many of the flights and flight-inclusive holidays on this website
-              are financially protected by the ATOL scheme. ATOL protection does
-              not apply to all travel services. Please ask us to confirm what
-              protection applies to your booking. If you do not receive an ATOL
-              Certificate, your booking will not be ATOL protected. For more
-              information visit{" "}
-              <a
-                href="https://www.atol.org.uk/ATOLCertificate"
-                target="_blank"
-                className="underline hover:text-background"
-              >
-                www.atol.org.uk
-              </a>
-              .
-            </p>
+            
           </div>
 
           {/* Quick Links */}
@@ -114,15 +99,7 @@ export function Footer() {
                 </div>
               </div>
 
-              {/* <div className="flex gap-2">
-                <MapPin size={16} className="mt-1 shrink-0" />
-                <div>
-                  <p className="font-semibold text-background">
-                    Near Manchester
-                  </p>
-                  <p>302 Colne Road, Burnley, BB10 1DZ</p>
-                </div>
-              </div> */}
+             
             </div>
 
             {/* Payments */}
@@ -145,7 +122,7 @@ export function Footer() {
             className="hover:opacity-80 transition"
           >
             <img
-              src="https://traveltoharam.co.uk/wp-content/uploads/2025/10/ministry-hajj.webp"
+              src="https://pbs.twimg.com/profile_images/2051916051311411206/9XMDS808_400x400.jpg"
               alt="Ministry of Hajj"
               className="h-10 object-contain"
             />
@@ -163,23 +140,15 @@ export function Footer() {
             />
           </a>
 
-          <a
-            href="https://www.atol.org.uk/ATOLCertificate"
-            target="_blank"
-            className="hover:opacity-80 transition"
-          >
-            <img
-              src="https://ziyarateumrahtravel.co.uk/wp-content/uploads/2024/08/IATA-logo-3CE0FA8A11-seeklogo.com_.png"
-              alt="ATOL Protected"
-              className="h-10 object-contain"
-            />
-          </a>
+          
         </div>
 
         {/* Bottom */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row items-center justify-between mt-6">
           <p className="text-sm text-background/60">
-            © 2026 Al Mumin Travels UK. All rights reserved.  Develooped by Devntom Solutions
+            © 2026 Al Mumin Travels UK. All rights reserved.  Develooped by <a href="https://www.devntomsolutions.com" target="_blank" className=" text-amber-50 hover:text-background">
+               Devntom Solutions
+            </a>
           </p>
 
           <div className="flex items-center gap-4 mt-4 md:mt-0">
